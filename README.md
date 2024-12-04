@@ -80,10 +80,6 @@ FSM mengelola alur kerja robot arm melalui beberapa status:
 **Diagram Alur FSM**
 
 ```mermaid
----
-config:
-  theme: base
----
 stateDiagram-v2
     [*] --> IDLE : Reset (rst = '1')
     state IDLE {
