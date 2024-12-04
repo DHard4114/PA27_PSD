@@ -8,11 +8,12 @@ Desain ini mengandalkan beberapa teknik utama dalam VHDL, seperti Microprogrammi
 ## 2. Bagaimana Sistem Bekerja
 
 ### 2.1 Struktur Sistem
-Sistem ini terdiri dari beberapa modul utama yang saling terintegrasi untuk menghasilkan fungsionalitas robot arm. Setiap modul memiliki tugas tertentu dalam proses pengoperasian robot arm, seperti menerima input, melakukan perhitungan navigasi, dan mengelola status sistem.
+Sistem ini terdiri dari beberapa modul utama yang saling terintegrasi untuk menghasilkan fungsionalitas robot arm. Setiap modul memiliki tugas tertentu dalam proses pengoperasian robot arm, seperti menerima input, melakukan perhitungan navigasi, dan mengelola status sistem. Sistem ini menerima input dalam bentuk koordinat 3D (x, y, z) untuk objek dan target yang akan dicapai oleh robot arm, dengan menggunakan input 48-bit yang dikelola dan didekode menggunakan microprogramming untuk memisahkan koordinat objek dan target.
 
 **Modul Utama dalam Sistem:**
 
 **1. Top-Level Entity**  
+
 Modul utama ini bertugas untuk menghubungkan dan mengelola interaksi antara semua modul lainnya dalam sistem, termasuk menerima input eksternal dan mengendalikan sinyal output. Modul ini akan menyambungkan modul-modul seperti **Input Decoder**, **Navigator**, **FSM**, dan **Display Segment**.
 
 Tugas Utama:
@@ -23,17 +24,33 @@ Tugas Utama:
 
 ---
 
-**2. Input Decoder**  
-Modul **Input Decoder** bertugas untuk memproses data koordinat yang diterima sebagai input gabungan (48-bit). Data ini memuat informasi koordinat objek dan target, yang kemudian akan dipisahkan dan didistribusikan ke modul **Navigator**.
+**2. Input Decoder (Microprogramming)**  
+
+Modul **Input Decoder** bertugas untuk memproses data koordinat yang diterima sebagai input gabungan 48-bit. Data ini memuat informasi koordinat objek (x_obj, y_obj, z_obj) dan target (x_target, y_target, z_target), yang kemudian akan dipisahkan dan didistribusikan ke modul **Navigator**.
+
+    Teori Input Koordinat 3D:  
+    Koordinat dalam sistem ini menggunakan sistem koordinat tiga dimensi (3D), yang terdiri dari tiga nilai untuk setiap titik, yaitu:
+    - x: Posisi pada sumbu horizontal.
+    - y: Posisi pada sumbu vertikal.
+    - z: Posisi pada sumbu kedalaman (depan-belakang).
+
+    Microprogramming untuk Mendecode Input 48-bit:  
+    Input 48-bit terdiri dari dua bagian:
+    - 24 bit pertama untuk koordinat objek (x_obj, y_obj, z_obj).
+    - 24 bit berikutnya untuk koordinat target (x_target, y_target, z_target).
+
+    Microprogramming digunakan untuk mengonversi bit-bit tersebut menjadi nilai koordinat 3D. Setiap 8-bit didekode menjadi nilai integer yang mewakili posisi pada sumbu x, y, atau z.
+
 
 Tugas Utama:
 - Menerima input dalam bentuk 48-bit (`input_data`) yang berisi koordinat objek dan target.
-- Memisahkan input tersebut menjadi 6 nilai koordinat (3 untuk objek dan 3 untuk target).
+- Menggunakan microprogramming untuk memisahkan input 48-bit menjadi 6 nilai koordinat (3 untuk objek dan 3 untuk target).
 - Mendistribusikan informasi yang telah didekode ke modul **Navigator** untuk digunakan dalam penggerakan robot.
 
 ---
 
 **3. Navigator**  
+
 Modul **Navigator** bertugas untuk melakukan navigasi robot arm berdasarkan perbandingan antara posisi saat ini dengan posisi target dan objek. Dengan demikian, modul ini akan memastikan robot bergerak menuju posisi yang diinginkan, dan mengontrol sinyal motor untuk memandu robot bergerak.
 
 Tugas Utama:
@@ -45,6 +62,7 @@ Tugas Utama:
 ---
 
 **4. Finite State Machine (FSM)**  
+
 Modul **FSM** mengatur status dan transisi sistem berdasarkan peristiwa yang terjadi, serta kontrol keseluruhan dari robot arm. FSM mengontrol langkah-langkah operasi robot, seperti bergerak menuju objek, menggenggam objek, bergerak ke target, dan melepaskan objek.
 
 Tugas Utama:
@@ -56,6 +74,7 @@ Tugas Utama:
 ---
 
 **5. Display Segment**  
+
 Modul **Display Segment** bertugas untuk menampilkan status robot dalam bentuk visual menggunakan display 7-segment berdasarkan status yang diterima dari FSM.
 
 Tugas Utama:
@@ -63,6 +82,7 @@ Tugas Utama:
 - Mengonversi status FSM menjadi sinyal yang dapat ditampilkan pada display 7-segment.
 - Menampilkan status robot (misalnya, IDLE, CALIBRATING, GRIP_OBJ, dll.) sesuai dengan keadaan yang ada.
 
+---
 
 ### 2.2 Alur Kerja Sistem Berdasarkan FSM
 FSM mengelola alur kerja robot arm melalui beberapa status:
@@ -91,7 +111,7 @@ stateDiagram-v2
     note right of IDLE
         Kondisi awal setelah reset
         Semua output default
-        Menunggu sinyal start
+        Menunggu start enable
     end note
     IDLE --> CALIBRATING : Kalibrasi dimulai
     state CALIBRATING {
@@ -106,8 +126,8 @@ stateDiagram-v2
     note right of CALIBRATING
         Verifikasi apakah motor dan gripper sudah bernilai 1 Jika keduanya 1, pos_reached = 1, kalibrasi selesai
     end note
-    CALIBRATING --> NAV_TO_OBJ : pos_reached = '1'(Kalibrasi selesai), start = '1' (Memulai)
-    CALIBRATING --> ERROR : pos_reached = '0' || start = '0'(Error kalibrasi)
+    CALIBRATING --> NAV_TO_OBJ : pos_reached = '1'(Kalibrasi selesai)(Memulai)
+    CALIBRATING --> ERROR : pos_reached = '0'(Error kalibrasi)
     state NAV_TO_OBJ {
         [*] --> MOVE_TO_OBJ : Aktifkan motor
         motor_en = '1'
