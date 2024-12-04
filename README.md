@@ -23,7 +23,7 @@ Tugas Utama:
 
 ---
 
-**2. Input Decoder**
+**2. Input Decoder**  
 Modul **Input Decoder** bertugas untuk memproses data koordinat yang diterima sebagai input gabungan (48-bit). Data ini memuat informasi koordinat objek dan target, yang kemudian akan dipisahkan dan didistribusikan ke modul **Navigator**.
 
 Tugas Utama:
@@ -33,7 +33,7 @@ Tugas Utama:
 
 ---
 
-**3. Navigator**
+**3. Navigator**  
 Modul **Navigator** bertugas untuk melakukan navigasi robot arm berdasarkan perbandingan antara posisi saat ini dengan posisi target dan objek. Dengan demikian, modul ini akan memastikan robot bergerak menuju posisi yang diinginkan, dan mengontrol sinyal motor untuk memandu robot bergerak.
 
 Tugas Utama:
