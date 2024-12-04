@@ -1,0 +1,274 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/dapah/Documents/Computer Engineering/PSD/PROYEK_ModelSim
+Edisplaysegment
+Z0 w1733315369
+Z1 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 54
+Z4 dC:/Users/dapah/Documents/Computer Engineering/PSD/PROYEK_AKHIR/ArmRobot_Code
+Z5 8C:/Users/dapah/Documents/Computer Engineering/PSD/PROYEK_AKHIR/ArmRobot_Code/DisplaySegment.vhdl
+Z6 FC:/Users/dapah/Documents/Computer Engineering/PSD/PROYEK_AKHIR/ArmRobot_Code/DisplaySegment.vhdl
+l0
+L5 1
+V757MN?58W<O5HcG382M]P2
+!s100 Qg0loKfU10dYkH8fT@JN21
+Z7 OV;C;2020.1;71
+32
+Z8 !s110 1733322938
+!i10b 1
+Z9 !s108 1733322938.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/dapah/Documents/Computer Engineering/PSD/PROYEK_AKHIR/ArmRobot_Code/DisplaySegment.vhdl|
+Z11 !s107 C:/Users/dapah/Documents/Computer Engineering/PSD/PROYEK_AKHIR/ArmRobot_Code/DisplaySegment.vhdl|
+!i113 1
+Z12 o-work work -2002 -explicit
+Z13 tExplicit 1 CvgOpt 0
+Abehavioral
+R1
+R2
+R3
+Z14 DEx4 work 14 displaysegment 0 22 757MN?58W<O5HcG382M]P2
+!i122 54
+l13
+L12 26
+V=Gl4ifC>[5Q>Y4R0FT6ob1
+!s100 kPX5ijUBaBDgglKFK`?WT2
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Einputdecoder
+Z15 w1733335069
+R1
+R2
+R3
+!i122 117
+R4
+Z16 8C:/Users/dapah/Documents/Computer Engineering/PSD/PROYEK_AKHIR/ArmRobot_Code/InputDecoder.vhdl
+Z17 FC:/Users/dapah/Documents/Computer Engineering/PSD/PROYEK_AKHIR/ArmRobot_Code/InputDecoder.vhdl
+l0
+L5 1
+V=aJH:EG<3elO@3_[^W`=W3
+!s100 >@VGJhX0m_dI0>L=6fWfm0
+R7
+32
+Z18 !s110 1733335083
+!i10b 1
+Z19 !s108 1733335083.000000
+Z20 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/dapah/Documents/Computer Engineering/PSD/PROYEK_AKHIR/ArmRobot_Code/InputDecoder.vhdl|
+Z21 !s107 C:/Users/dapah/Documents/Computer Engineering/PSD/PROYEK_AKHIR/ArmRobot_Code/InputDecoder.vhdl|
+!i113 1
+R12
+R13
+Abehavioral
+R1
+R2
+R3
+Z22 DEx4 work 12 inputdecoder 0 22 =aJH:EG<3elO@3_[^W`=W3
+!i122 117
+l22
+L17 13
+VVN2QZKLRRCAmK:P07F_7_2
+!s100 XXzX4BHna2G9<]G:>K61]3
+R7
+32
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 1
+R12
+R13
+Enavigator
+Z23 w1733305691
+R1
+R2
+R3
+!i122 27
+R4
+Z24 8C:/Users/dapah/Documents/Computer Engineering/PSD/PROYEK_AKHIR/ArmRobot_Code/Navigator.vhdl
+Z25 FC:/Users/dapah/Documents/Computer Engineering/PSD/PROYEK_AKHIR/ArmRobot_Code/Navigator.vhdl
+l0
+L5 1
+V1?lTQmC`P^APFjDOdfC9^1
+!s100 ;^GEeBmd3GgT8ZVg8[0N60
+R7
+32
+Z26 !s110 1733317650
+!i10b 1
+Z27 !s108 1733317650.000000
+Z28 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/dapah/Documents/Computer Engineering/PSD/PROYEK_AKHIR/ArmRobot_Code/Navigator.vhdl|
+Z29 !s107 C:/Users/dapah/Documents/Computer Engineering/PSD/PROYEK_AKHIR/ArmRobot_Code/Navigator.vhdl|
+!i113 1
+R12
+R13
+Abehavioral
+R1
+R2
+R3
+Z30 DEx4 work 9 navigator 0 22 1?lTQmC`P^APFjDOdfC9^1
+!i122 27
+l23
+L20 52
+VQAeFd6X>8_?lH]Y0VQD<o3
+!s100 Oj;Uo@]fzXei7XEicSlE>2
+R7
+32
+R26
+!i10b 1
+R27
+R28
+R29
+!i113 1
+R12
+R13
+Erobotarmfpga
+Z31 w1733324088
+R1
+R2
+R3
+!i122 110
+R4
+Z32 8C:/Users/dapah/Documents/Computer Engineering/PSD/PROYEK_AKHIR/ArmRobot_Code/RobotArmFPGA.vhdl
+Z33 FC:/Users/dapah/Documents/Computer Engineering/PSD/PROYEK_AKHIR/ArmRobot_Code/RobotArmFPGA.vhdl
+l0
+L5 1
+VORWGdLEXLA3n3F1DLjNh61
+!s100 4e`AmhQcDHbVDk5eSNM8W0
+R7
+32
+Z34 !s110 1733332404
+!i10b 1
+Z35 !s108 1733332404.000000
+Z36 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/dapah/Documents/Computer Engineering/PSD/PROYEK_AKHIR/ArmRobot_Code/RobotArmFPGA.vhdl|
+Z37 !s107 C:/Users/dapah/Documents/Computer Engineering/PSD/PROYEK_AKHIR/ArmRobot_Code/RobotArmFPGA.vhdl|
+!i113 1
+R12
+R13
+Astructural
+R14
+Z38 DEx4 work 11 robotarmfsm 0 22 EAUKA6JDMG=N1V]CUDFCI0
+R30
+R22
+R1
+R2
+R3
+DEx4 work 12 robotarmfpga 0 22 ORWGdLEXLA3n3F1DLjNh61
+!i122 110
+l33
+L23 66
+ViTR::dljAB@JXeTHZ_l`f0
+!s100 IZen8_Y8EZ4z0[Vj1Y8WI0
+R7
+32
+R34
+!i10b 1
+R35
+R36
+R37
+!i113 1
+R12
+R13
+Erobotarmfsm
+Z39 w1733335511
+R1
+R2
+R3
+!i122 118
+R4
+Z40 8C:/Users/dapah/Documents/Computer Engineering/PSD/PROYEK_AKHIR/ArmRobot_Code/RobotArmFSM.vhdl
+Z41 FC:/Users/dapah/Documents/Computer Engineering/PSD/PROYEK_AKHIR/ArmRobot_Code/RobotArmFSM.vhdl
+l0
+L5 1
+VEAUKA6JDMG=N1V]CUDFCI0
+!s100 ng@3MQDgRg:HbhnF3499G0
+R7
+32
+Z42 !s110 1733335702
+!i10b 1
+Z43 !s108 1733335702.000000
+Z44 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/dapah/Documents/Computer Engineering/PSD/PROYEK_AKHIR/ArmRobot_Code/RobotArmFSM.vhdl|
+Z45 !s107 C:/Users/dapah/Documents/Computer Engineering/PSD/PROYEK_AKHIR/ArmRobot_Code/RobotArmFSM.vhdl|
+!i113 1
+R12
+R13
+Abehavioral
+R1
+R2
+R3
+R38
+!i122 118
+l22
+Z46 L18 153
+Z47 Vmc9mJ^L@<SSP5OFXgWLFB1
+Z48 !s100 IbQE^^@EFmH;Fc72UcC<b3
+R7
+32
+R42
+!i10b 1
+R43
+R44
+R45
+!i113 1
+R12
+R13
+Erobotarmtestbench
+Z49 w1733315610
+R1
+R2
+R3
+!i122 56
+R4
+Z50 8C:/Users/dapah/Documents/Computer Engineering/PSD/PROYEK_AKHIR/ArmRobot_Code/RobotArmTestbench.vhdl
+Z51 FC:/Users/dapah/Documents/Computer Engineering/PSD/PROYEK_AKHIR/ArmRobot_Code/RobotArmTestbench.vhdl
+l0
+L5 1
+VHflGWJcK]GH3S?g[TnFHN1
+!s100 12>zfJ0idm`l>e[4=c__d3
+R7
+32
+Z52 !s110 1733322942
+!i10b 1
+Z53 !s108 1733322942.000000
+Z54 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/dapah/Documents/Computer Engineering/PSD/PROYEK_AKHIR/ArmRobot_Code/RobotArmTestbench.vhdl|
+Z55 !s107 C:/Users/dapah/Documents/Computer Engineering/PSD/PROYEK_AKHIR/ArmRobot_Code/RobotArmTestbench.vhdl|
+!i113 1
+R12
+R13
+Abehavior
+DEx4 work 12 robotarmfpga 0 22 NcHLIe1i<U6fOznX4ne`j2
+R1
+R2
+R3
+DEx4 work 17 robotarmtestbench 0 22 HflGWJcK]GH3S?g[TnFHN1
+!i122 56
+l18
+L8 82
+Ve7h;Q8ZjWFR8a<C8z[<d<3
+!s100 nQ`[Q6Ye4XUbzKVcHg@m23
+R7
+32
+R52
+!i10b 1
+R53
+R54
+R55
+!i113 1
+R12
+R13
