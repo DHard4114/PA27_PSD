@@ -17,6 +17,13 @@
 *.gdb
 *.trace
 
+# Ignore ModelSim related files
+*.cr.mti
+*.mpf
+transcript
+*.wlf
+*.vstf
+
 # Ignore backup files (e.g., vim, emacs)
 *~
 *.swp
