@@ -1,0 +1,33 @@
+# Ignore ModelSim/Intel FPGA compilation files
+/modelsim.ini
+/work/
+*.wlf
+*.log
+*.bak
+*.vho
+*.fdb
+*.fsdb
+*.psf
+*.xwf
+*.sdo
+*.db
+
+# Ignore ModelSim simulation results
+*.vcd
+*.gdb
+*.trace
+
+# Ignore backup files (e.g., vim, emacs)
+*~
+*.swp
+
+# Ignore temporary files created by text editors (e.g., VSCode, Sublime Text)
+.vscode/
+.idea/
+
+# Ignore compiled and build files
+*.o
+*.obj
+*.exe
+*.out
+*.dll
