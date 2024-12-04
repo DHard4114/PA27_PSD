@@ -12,17 +12,57 @@ Sistem ini terdiri dari beberapa modul utama yang saling terintegrasi untuk meng
 
 **Modul Utama dalam Sistem:**
 
-- **Top-Level Entity**  
-  Modul ini berfungsi untuk menghubungkan dan mengelola interaksi antara semua modul lainnya, menerima input dari luar dan mengendalikan sinyal output.
+**1. Top-Level Entity**  
+Modul utama ini bertugas untuk menghubungkan dan mengelola interaksi antara semua modul lainnya dalam sistem, termasuk menerima input eksternal dan mengendalikan sinyal output. Modul ini akan menyambungkan modul-modul seperti **Input Decoder**, **Navigator**, **FSM**, dan **Display Segment**.
 
-- **Input Decoder**  
-  Modul ini bertugas untuk memproses data koordinat yang diterima sebagai input gabungan (48-bit) untuk memisahkan koordinat objek dan target, kemudian mendistribusikan informasi tersebut ke modul navigasi.
+Tugas Utama:
+- Mengatur komunikasi antar modul yang berbeda.
+- Mengelola sinyal input dari luar (misalnya, `input_data` dan `start`).
+- Menghasilkan sinyal output untuk kendali robot (misalnya, `motor_en`, `gripper_open`, `state_out`, dll.).
+- Menyambungkan sinyal status dari FSM dan Navigator ke output utama (posisi robot, error, status FSM).
 
-- **Navigator**  
-  Modul ini melakukan navigasi robot arm dengan membandingkan posisi saat ini dengan posisi target dan objek. Modul ini memandu robot untuk bergerak menuju posisi yang diinginkan dengan mengaktifkan motor.
+---
 
-- **Finite State Machine (FSM)**  
-  Modul ini mengatur status dan transisi sistem berdasarkan peristiwa yang terjadi. FSM mengontrol langkah-langkah operasi robot, seperti bergerak ke objek, menggenggam objek, bergerak ke target, dan melepaskan objek.
+**2. Input Decoder**
+Modul **Input Decoder** bertugas untuk memproses data koordinat yang diterima sebagai input gabungan (48-bit). Data ini memuat informasi koordinat objek dan target, yang kemudian akan dipisahkan dan didistribusikan ke modul **Navigator**.
+
+Tugas Utama:
+- Menerima input dalam bentuk 48-bit (`input_data`) yang berisi koordinat objek dan target.
+- Memisahkan input tersebut menjadi 6 nilai koordinat (3 untuk objek dan 3 untuk target).
+- Mendistribusikan informasi yang telah didekode ke modul **Navigator** untuk digunakan dalam penggerakan robot.
+
+---
+
+**3. Navigator**
+Modul **Navigator** bertugas untuk melakukan navigasi robot arm berdasarkan perbandingan antara posisi saat ini dengan posisi target dan objek. Dengan demikian, modul ini akan memastikan robot bergerak menuju posisi yang diinginkan, dan mengontrol sinyal motor untuk memandu robot bergerak.
+
+Tugas Utama:
+- Menerima koordinat target dan objek dari **Input Decoder**.
+- Mengatur pergerakan robot berdasarkan posisi saat ini dan target.
+- Mengaktifkan motor untuk bergerak menuju posisi target.
+- Menghasilkan sinyal **pos_reached** yang menandakan apakah robot telah mencapai posisi target atau belum.
+
+---
+
+**4. Finite State Machine (FSM)**  
+Modul **FSM** mengatur status dan transisi sistem berdasarkan peristiwa yang terjadi, serta kontrol keseluruhan dari robot arm. FSM mengontrol langkah-langkah operasi robot, seperti bergerak menuju objek, menggenggam objek, bergerak ke target, dan melepaskan objek.
+
+Tugas Utama:
+- Mengelola status robot melalui serangkaian kondisi (state), seperti IDLE, CALIBRATING, NAV_TO_OBJ, GRIP_OBJ, HOLDING, NAV_TO_TGT, RELEASE_OBJ, dan ERROR.
+- Mengontrol transisi antar status berdasarkan input dari sinyal `start` dan `pos_reached`.
+- Menghasilkan sinyal kontrol seperti `motor_en` dan `gripper_open` untuk mengendalikan motor dan gripper.
+- Menghasilkan `state_out` yang merepresentasikan status robot dalam bentuk 3-bit, dan `error_out` yang menunjukkan jika terjadi kesalahan dalam sistem.
+
+---
+
+**5. Display Segment**  
+Modul **Display Segment** bertugas untuk menampilkan status robot dalam bentuk visual menggunakan display 7-segment berdasarkan status yang diterima dari FSM.
+
+Tugas Utama:
+- Menerima status FSM (`state_in`) yang berupa sinyal 3-bit.
+- Mengonversi status FSM menjadi sinyal yang dapat ditampilkan pada display 7-segment.
+- Menampilkan status robot (misalnya, IDLE, CALIBRATING, GRIP_OBJ, dll.) sesuai dengan keadaan yang ada.
+
 
 ### 2.2 Alur Kerja Sistem Berdasarkan FSM
 FSM mengelola alur kerja robot arm melalui beberapa status:
