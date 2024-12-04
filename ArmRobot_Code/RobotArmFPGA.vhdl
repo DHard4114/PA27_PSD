@@ -8,9 +8,9 @@ ENTITY RobotArmFPGA IS
         rst : IN STD_LOGIC; -- Reset
         input_data : IN STD_LOGIC_VECTOR(47 DOWNTO 0); -- Input gabungan koordinat objek & target
         start : IN STD_LOGIC; -- Sinyal mulai operasi
-        pos_reached : OUT STD_LOGIC; -- Indikator posisi tercapai
         gripper_open : OUT STD_LOGIC; -- Output gripper aktif
         motor_en : OUT STD_LOGIC; -- Output motor aktif
+        pos_reached : OUT STD_LOGIC; -- Indikator posisi tercapai
         state_out : OUT STD_LOGIC_VECTOR(2 DOWNTO 0); -- Status FSM
         error_out : OUT STD_LOGIC; -- Indikator error
         x_out : OUT INTEGER RANGE 0 TO 999; -- Posisi x robot
@@ -65,8 +65,8 @@ BEGIN
             rst => rst,
             start => start,
             pos_reached => pos_reached_internal,
-            gripper_open => gripper_enable,
-            motor_en => motor_enable,
+            gripper_status => gripper_enable,
+            motor_status => motor_enable,
             state_out => internal_state,
             error_out => error_flag
         );

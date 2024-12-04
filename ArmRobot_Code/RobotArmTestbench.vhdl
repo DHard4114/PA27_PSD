@@ -50,7 +50,7 @@ BEGIN
 
         -- Test 2: Start Kalibrasi
         start <= '1';
-        input_data <= "000000000001010000000101000001100011001100"; -- Koordinat objek (10,20,30) dan target (50,40,60)
+        input_data <= "000001010000101000001111000101000001100100011110"; -- Koordinat objek (10,20,30) dan target (50,40,60)
         WAIT FOR 20 ns;
         start <= '0';
         WAIT FOR 20 ns;

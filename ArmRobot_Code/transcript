@@ -1,0 +1,985 @@
+vsim -gui work.robotarmfsm
+# vsim -gui work.robotarmfsm 
+# Start time: 22:29:44 on Dec 04,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.robotarmfsm(behavioral)
+add wave -position insertpoint sim:/robotarmfsm/*
+force -freeze sim:/robotarmfsm/clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/robotarmfsm/rst 1 0
+run
+force -freeze sim:/robotarmfsm/start 1 0
+force -freeze sim:/robotarmfsm/rst 0 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of RobotArmFSM.vhdl was successful.
+vsim -gui work.robotarmfsm
+# End time: 22:34:32 on Dec 04,2024, Elapsed time: 0:04:48
+# Errors: 0, Warnings: 2
+# vsim -gui work.robotarmfsm 
+# Start time: 22:34:32 on Dec 04,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.robotarmfsm(behavioral)
+add wave -position insertpoint sim:/robotarmfsm/*
+force -freeze sim:/robotarmfsm/clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/robotarmfsm/rst 1 0
+run
+force -freeze sim:/robotarmfsm/start 1 0
+force -freeze sim:/robotarmfsm/rst 0 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run -all
+run
+# Compile of RobotArmFSM.vhdl was successful.
+vsim -gui work.robotarmfsm
+# End time: 22:37:35 on Dec 04,2024, Elapsed time: 0:03:03
+# Errors: 0, Warnings: 2
+# vsim -gui work.robotarmfsm 
+# Start time: 22:37:35 on Dec 04,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.robotarmfsm(behavioral)
+add wave -position insertpoint sim:/robotarmfsm/*
+force -freeze sim:/robotarmfsm/clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/robotarmfsm/rst 1 0
+run
+force -freeze sim:/robotarmfsm/rst 0 0
+force -freeze sim:/robotarmfsm/start 1 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of RobotArmFSM.vhdl failed with 5 errors.
+# Compile of RobotArmFSM.vhdl was successful.
+vsim -gui work.robotarmfsm
+# End time: 22:46:55 on Dec 04,2024, Elapsed time: 0:09:20
+# Errors: 0, Warnings: 3
+# vsim -gui work.robotarmfsm 
+# Start time: 22:46:55 on Dec 04,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.robotarmfsm(behavioral)
+add wave -position insertpoint sim:/robotarmfsm/*
+force -freeze sim:/robotarmfsm/clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/robotarmfsm/rst 1 0
+run
+force -freeze sim:/robotarmfsm/rst 0 0
+force -freeze sim:/robotarmfsm/start 1 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+add wave -position insertpoint sim:/robotarmfsm/*
+run
+run
+run
+run
+force -freeze sim:/robotarmfsm/pos_reached 1 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/robotarmfsm/rst 1 0
+run
+run
+force -freeze sim:/robotarmfsm/rst 0 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/robotarmfsm/motor_status 0 0
+run
+force -freeze sim:/robotarmfsm/rst 1 0
+run
+force -freeze sim:/robotarmfsm/rst 0 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/robotarmfsm/next_state HOLDING 0
+run
+run
+run
+run
+run
+force -freeze sim:/robotarmfsm/rst 1 0
+run
+force -freeze sim:/robotarmfsm/rst 1 0
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/robotarmfsm/gripper_status 0 0
+run
+run
+run
+run
+force -freeze sim:/robotarmfsm/rst 0 0
+run
+force -freeze sim:/robotarmfsm/rst 0 0
+run
+run
+noforce sim:/robotarmfsm/next_state
+run
+run
+run
+run
+# Compile of RobotArmFSM.vhdl was successful.
+vsim -gui work.robotarmfsm
+# End time: 22:58:24 on Dec 04,2024, Elapsed time: 0:11:29
+# Errors: 0, Warnings: 2
+# vsim -gui work.robotarmfsm 
+# Start time: 22:58:24 on Dec 04,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.robotarmfsm(behavioral)
+add wave -position insertpoint sim:/robotarmfsm/*
+force -freeze sim:/robotarmfsm/clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/robotarmfsm/rst 1 0
+run
+force -freeze sim:/robotarmfsm/rst 0 0
+force -freeze sim:/robotarmfsm/start 1 0
+run
+run
+run
+noforce sim:/robotarmfsm/rst
+run
+run
+force -freeze sim:/robotarmfsm/rst 0 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/robotarmfsm/pos_reached 1 0
+run
+run
+run
+run
+force -freeze sim:/robotarmfsm/rst 1 0
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/robotarmfsm/rst 0 0
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of RobotArmFSM.vhdl failed with 5 errors.
+# Compile of RobotArmFSM.vhdl failed with 3 errors.
+run
+# Compile of RobotArmFSM.vhdl failed with 3 errors.
+# Compile of RobotArmFSM.vhdl failed with 3 errors.
+# Compile of RobotArmFSM.vhdl failed with 3 errors.
+# Compile of RobotArmFSM.vhdl failed with 1 errors.
+# Compile of RobotArmFSM.vhdl was successful.
+vsim -gui work.robotarmfsm
+# End time: 23:29:36 on Dec 04,2024, Elapsed time: 0:31:12
+# Errors: 0, Warnings: 8
+# vsim -gui work.robotarmfsm 
+# Start time: 23:29:36 on Dec 04,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.robotarmfsm(behavioral)
+add wave -position insertpoint sim:/robotarmfsm/*
+force -freeze sim:/robotarmfsm/clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/robotarmfsm/rst 1 0
+run
+force -freeze sim:/robotarmfsm/rst 0 0
+force -freeze sim:/robotarmfsm/start 1 0
+run
+run
+run
+run
+run
+force -freeze sim:/robotarmfsm/pos_reached 1 0
+run
+run
+run
+force -freeze sim:/robotarmfsm/rst 1 0
+run
+force -freeze sim:/robotarmfsm/rst 0 0
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/robotarmfsm/rst 1 0
+run
+force -freeze sim:/robotarmfsm/rst 0 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/robotarmfsm/rst 1 0
+# Compile of RobotArmFSM.vhdl was successful.
+run
+run
+force -freeze sim:/robotarmfsm/rst 0 0
+run
+run
+run
+force -freeze sim:/robotarmfsm/pos_reached 1 0
+run
+run
+run
+run
+run
+force -freeze sim:/robotarmfsm/pos_reached 0 0
+run
+run
+force -freeze sim:/robotarmfsm/pos_reached 1 0
+run
+run
+run
+run
+force -freeze sim:/robotarmfsm/start 0 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/robotarmfsm/start 1 0
+run
+run
+run
+run
+run
+force -freeze sim:/robotarmfsm/rst 1 0
+run
+force -freeze sim:/robotarmfsm/start 1 0
+force -freeze sim:/robotarmfsm/rst 0 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/robotarmfsm/rst 1 0
+run
+run
+run
+run
+run
+force -freeze sim:/robotarmfsm/rst 0 0
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of RobotArmFSM.vhdl was successful.
+vsim -gui work.robotarmfsm
+# End time: 23:38:36 on Dec 04,2024, Elapsed time: 0:09:00
+# Errors: 0, Warnings: 3
+# vsim -gui work.robotarmfsm 
+# Start time: 23:38:36 on Dec 04,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.robotarmfsm(behavioral)
+add wave -position insertpoint sim:/robotarmfsm/*
+force -freeze sim:/robotarmfsm/clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/robotarmfsm/rst 1 0
+run
+force -freeze sim:/robotarmfsm/rst 0 0
+force -freeze sim:/robotarmfsm/start 1 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of RobotArmFSM.vhdl failed with 6 errors.
+# Compile of RobotArmFSM.vhdl failed with 3 errors.
+# Compile of RobotArmFSM.vhdl was successful.
+vsim -gui work.robotarmfsm
+# End time: 23:43:52 on Dec 04,2024, Elapsed time: 0:05:16
+# Errors: 0, Warnings: 4
+# vsim -gui work.robotarmfsm 
+# Start time: 23:43:52 on Dec 04,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.robotarmfsm(behavioral)
+add wave -position insertpoint sim:/robotarmfsm/*
+force -freeze sim:/robotarmfsm/clk 1 0, 0 {50 ps} -r 100
+noforce sim:/robotarmfsm/rst
+force -freeze sim:/robotarmfsm/rst 1 0
+run
+force -freeze sim:/robotarmfsm/rst 0 0
+force -freeze sim:/robotarmfsm/start 1 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of RobotArmFSM.vhdl failed with 22 errors.
+# Compile of RobotArmFSM.vhdl failed with 22 errors.
+# Compile of RobotArmFSM.vhdl failed with 21 errors.
+# Compile of RobotArmFSM.vhdl failed with 24 errors.
+# Compile of RobotArmFSM.vhdl failed with 24 errors.
+# Compile of RobotArmFSM.vhdl was successful.
+vsim -gui work.robotarmfsm
+# End time: 23:48:12 on Dec 04,2024, Elapsed time: 0:04:20
+# Errors: 0, Warnings: 7
+# vsim -gui work.robotarmfsm 
+# Start time: 23:48:12 on Dec 04,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.robotarmfsm(behavioral)
+add wave -position insertpoint sim:/robotarmfsm/*
+force -freeze sim:/robotarmfsm/clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/robotarmfsm/rst 1 0
+run
+force -freeze sim:/robotarmfsm/rst 0 0
+force -freeze sim:/robotarmfsm/start 1 0
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of RobotArmFSM.vhdl failed with 26 errors.
+# Compile of RobotArmFSM.vhdl was successful.
+# Load canceled
+vsim -gui work.robotarmfsm
+# End time: 23:51:29 on Dec 04,2024, Elapsed time: 0:03:17
+# Errors: 0, Warnings: 3
+# vsim -gui work.robotarmfsm 
+# Start time: 23:51:29 on Dec 04,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.robotarmfsm(behavioral)
+add wave -position insertpoint sim:/robotarmfsm/*
+add wave -position insertpoint sim:/robotarmfsm/*
+force -freeze sim:/robotarmfsm/clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/robotarmfsm/rst 1 0
+run
+force -freeze sim:/robotarmfsm/start 1 0
+force -freeze sim:/robotarmfsm/rst 0 0
+run
+run
+run
+run
+force -freeze sim:/robotarmfsm/gripper_status 1 0
+force -freeze sim:/robotarmfsm/motor_status 1 0
+run
+run
+run
+force -freeze sim:/robotarmfsm/pos_reached 1 0
+run
+run
+run
+run
+run
+force -freeze sim:/robotarmfsm/rst 0 0
+run
+run
+force -freeze sim:/robotarmfsm/rst 1 0
+force -freeze sim:/robotarmfsm/rst 1 0
+force -freeze sim:/robotarmfsm/start 1 0
+run
+run
+run
+force -freeze sim:/robotarmfsm/rst 0 0
+run
+run
+run
+run
+run
+run
+force -freeze sim:/robotarmfsm/rst 1 0
+run
+force -freeze sim:/robotarmfsm/rst 0 0
+force -freeze sim:/robotarmfsm/rst 0 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/robotarmfsm/start 0 0
+run
+force -freeze sim:/robotarmfsm/start 1 0
+force -freeze sim:/robotarmfsm/start 1 0
+run
+run
+run
+run
+run
+run
+run
+# Compile of RobotArmFSM.vhdl failed with 19 errors.
+# Compile of RobotArmFSM.vhdl was successful.
+# Compile of RobotArmFSM.vhdl failed with 1 errors.
+# Compile of RobotArmFSM.vhdl failed with 1 errors.
+# Compile of RobotArmFSM.vhdl failed with 1 errors.
+# Compile of RobotArmFSM.vhdl failed with 1 errors.
+# Compile of RobotArmFSM.vhdl failed with 1 errors.
+# Compile of RobotArmFSM.vhdl failed with 1 errors.
+# Compile of RobotArmFSM.vhdl failed with 1 errors.
+# Compile of RobotArmFSM.vhdl failed with 1 errors.
+# Compile of RobotArmFSM.vhdl failed with 1 errors.
+# Compile of RobotArmFSM.vhdl failed with 2 errors.
+# Compile of RobotArmFSM.vhdl failed with 2 errors.
+# Compile of RobotArmFSM.vhdl was successful.
+vsim -gui work.robotarmfsm
+# End time: 00:12:28 on Dec 05,2024, Elapsed time: 0:20:59
+# Errors: 0, Warnings: 15
+# vsim -gui work.robotarmfsm 
+# Start time: 00:12:28 on Dec 05,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.robotarmfsm(behavioral)
+add wave -position insertpoint sim:/robotarmfsm/*
+force -freeze sim:/robotarmfsm/clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/robotarmfsm/rst 1 0
+run
+force -freeze sim:/robotarmfsm/rst 0 0
+force -freeze sim:/robotarmfsm/start 1 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of RobotArmFPGA.vhdl was successful.
+vsim -gui work.robotarmfpga
+# End time: 00:13:32 on Dec 05,2024, Elapsed time: 0:01:04
+# Errors: 0, Warnings: 2
+# vsim -gui work.robotarmfpga 
+# Start time: 00:13:32 on Dec 05,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.robotarmfpga(structural)
+# Loading work.inputdecoder(behavioral)
+# Loading work.navigator(behavioral)
+# Loading work.robotarmfsm(behavioral)
+# Loading work.displaysegment(behavioral)
+add wave -position insertpoint sim:/robotarmfpga/*
+force -freeze sim:/robotarmfpga/clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/robotarmfpga/rst 1 0
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /robotarmfpga/Decoder_Module
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /robotarmfpga/Decoder_Module
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /robotarmfpga/Decoder_Module
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /robotarmfpga/Decoder_Module
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /robotarmfpga/Decoder_Module
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /robotarmfpga/Decoder_Module
+force -freeze sim:/robotarmfpga/rst 0 0
+force -freeze sim:/robotarmfpga/start 1 0
+force -freeze sim:/robotarmfpga/input_data 000001010000101000001111000101000001100100011110 0
+run
+# ** Fatal: (vsim-3421) Value 2575 is out of range 0 to 999.
+#    Time: 100 ps  Iteration: 1  Process: /robotarmfpga/Decoder_Module/line__24 File: C:/Users/dapah/Documents/Computer Engineering/PSD/PROYEK_AKHIR/ArmRobot_Code/InputDecoder.vhdl Line: 24
+# Fatal error in Architecture Behavioral at C:/Users/dapah/Documents/Computer Engineering/PSD/PROYEK_AKHIR/ArmRobot_Code/InputDecoder.vhdl line 24
+# 
+# HDL call sequence:
+# Stopped at C:/Users/dapah/Documents/Computer Engineering/PSD/PROYEK_AKHIR/ArmRobot_Code/InputDecoder.vhdl 24 Architecture Behavioral
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/dapah/Documents/Computer Engineering/PSD/PROYEK_AKHIR/ArmRobot_Code/InputDecoder.vhdl 24 Architecture Behavioral
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/dapah/Documents/Computer Engineering/PSD/PROYEK_AKHIR/ArmRobot_Code/InputDecoder.vhdl 24 Architecture Behavioral
+# 
+# Compile of RobotArmFSM.vhdl was successful.
+vsim -gui work.navigator
+# End time: 00:29:42 on Dec 05,2024, Elapsed time: 0:16:10
+# Errors: 1, Warnings: 8
+# vsim -gui work.navigator 
+# Start time: 00:29:42 on Dec 05,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.navigator(behavioral)
+add wave -position insertpoint sim:/navigator/*
+force -freeze sim:/navigator/clk 1 0
+noforce sim:/navigator/rst
+force -freeze sim:/navigator/rst 1 0
+run
+force -freeze sim:/navigator/rst 0 0
+force -freeze sim:/navigator/start 1 0
+force -freeze sim:/navigator/target_x 10 0
+force -freeze sim:/navigator/target_y 20 0
+force -freeze sim:/navigator/target_z 30 0
+run
+run
+run
+run
+force -freeze sim:/navigator/clk 1 0, 0 {50 ps} -r 100
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of RobotArmFSM.vhdl was successful.
+vsim -gui work.robotarmtestbench
+# End time: 00:36:09 on Dec 05,2024, Elapsed time: 0:06:27
+# Errors: 0, Warnings: 2
+# vsim -gui work.robotarmtestbench 
+# Start time: 00:36:09 on Dec 05,2024
+# Loading std.standard
+# ** Error: (vsim-13) Recompile work.robotarmtestbench(behavior) because work.robotarmfpga has changed.
+# Error loading design
+# End time: 00:36:09 on Dec 05,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 1
+vsim -gui work.robotarmtestbench
+# vsim -gui work.robotarmtestbench 
+# Start time: 00:36:23 on Dec 05,2024
+# Loading std.standard
+# ** Error: (vsim-13) Recompile work.robotarmtestbench(behavior) because work.robotarmfpga has changed.
+# Error loading design
+# End time: 00:36:23 on Dec 05,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 1
+vsim -gui work.inputdecoder
+# vsim -gui work.inputdecoder 
+# Start time: 00:39:02 on Dec 05,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.inputdecoder(behavioral)
+add wave -position insertpoint sim:/inputdecoder/*
+force -freeze sim:/inputdecoder/input_data 000001010000101000001111000101000001100100011110 0
+run
+# ** Fatal: (vsim-3421) Value 2575 is out of range 0 to 999.
+#    Time: 0 ps  Iteration: 0  Process: /inputdecoder/line__24 File: C:/Users/dapah/Documents/Computer Engineering/PSD/PROYEK_AKHIR/ArmRobot_Code/InputDecoder.vhdl Line: 24
+# Fatal error in Architecture Behavioral at C:/Users/dapah/Documents/Computer Engineering/PSD/PROYEK_AKHIR/ArmRobot_Code/InputDecoder.vhdl line 24
+# 
+# HDL call sequence:
+# Stopped at C:/Users/dapah/Documents/Computer Engineering/PSD/PROYEK_AKHIR/ArmRobot_Code/InputDecoder.vhdl 24 Architecture Behavioral
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/dapah/Documents/Computer Engineering/PSD/PROYEK_AKHIR/ArmRobot_Code/InputDecoder.vhdl 24 Architecture Behavioral
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/dapah/Documents/Computer Engineering/PSD/PROYEK_AKHIR/ArmRobot_Code/InputDecoder.vhdl 24 Architecture Behavioral
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/dapah/Documents/Computer Engineering/PSD/PROYEK_AKHIR/ArmRobot_Code/InputDecoder.vhdl 24 Architecture Behavioral
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/dapah/Documents/Computer Engineering/PSD/PROYEK_AKHIR/ArmRobot_Code/InputDecoder.vhdl 24 Architecture Behavioral
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/dapah/Documents/Computer Engineering/PSD/PROYEK_AKHIR/ArmRobot_Code/InputDecoder.vhdl 24 Architecture Behavioral
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/dapah/Documents/Computer Engineering/PSD/PROYEK_AKHIR/ArmRobot_Code/InputDecoder.vhdl 24 Architecture Behavioral
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/dapah/Documents/Computer Engineering/PSD/PROYEK_AKHIR/ArmRobot_Code/InputDecoder.vhdl 24 Architecture Behavioral
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/dapah/Documents/Computer Engineering/PSD/PROYEK_AKHIR/ArmRobot_Code/InputDecoder.vhdl 24 Architecture Behavioral
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/dapah/Documents/Computer Engineering/PSD/PROYEK_AKHIR/ArmRobot_Code/InputDecoder.vhdl 24 Architecture Behavioral
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/dapah/Documents/Computer Engineering/PSD/PROYEK_AKHIR/ArmRobot_Code/InputDecoder.vhdl 24 Architecture Behavioral
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/dapah/Documents/Computer Engineering/PSD/PROYEK_AKHIR/ArmRobot_Code/InputDecoder.vhdl 24 Architecture Behavioral
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/dapah/Documents/Computer Engineering/PSD/PROYEK_AKHIR/ArmRobot_Code/InputDecoder.vhdl 24 Architecture Behavioral
+# 
+run -all
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/dapah/Documents/Computer Engineering/PSD/PROYEK_AKHIR/ArmRobot_Code/InputDecoder.vhdl 24 Architecture Behavioral
+# 
+# Compile of InputDecoder.vhdl was successful.
+vsim -gui work.inputdecoder
+# End time: 00:47:07 on Dec 05,2024, Elapsed time: 0:08:05
+# Errors: 1, Warnings: 2
+# vsim -gui work.inputdecoder 
+# Start time: 00:47:07 on Dec 05,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.inputdecoder(behavioral)
+add wave -position insertpoint sim:/inputdecoder/*
+force -freeze sim:/inputdecoder/input_data 000001010000101000001111000101000001100100011110 0
+run
+# ** Fatal: (vsim-3421) Value 2575 is out of range 0 to 999.
+#    Time: 0 ps  Iteration: 0  Process: /inputdecoder/line__19 File: C:/Users/dapah/Documents/Computer Engineering/PSD/PROYEK_AKHIR/ArmRobot_Code/InputDecoder.vhdl Line: 22
+# Fatal error in Process line__19 at C:/Users/dapah/Documents/Computer Engineering/PSD/PROYEK_AKHIR/ArmRobot_Code/InputDecoder.vhdl line 22
+# 
+# HDL call sequence:
+# Stopped at C:/Users/dapah/Documents/Computer Engineering/PSD/PROYEK_AKHIR/ArmRobot_Code/InputDecoder.vhdl 22 Process line__19
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/dapah/Documents/Computer Engineering/PSD/PROYEK_AKHIR/ArmRobot_Code/InputDecoder.vhdl 22 Process line__19
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/dapah/Documents/Computer Engineering/PSD/PROYEK_AKHIR/ArmRobot_Code/InputDecoder.vhdl 22 Process line__19
+# 
+run -all
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/dapah/Documents/Computer Engineering/PSD/PROYEK_AKHIR/ArmRobot_Code/InputDecoder.vhdl 22 Process line__19
+# 
+force -freeze sim:/inputdecoder/y_obj 10 0
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/dapah/Documents/Computer Engineering/PSD/PROYEK_AKHIR/ArmRobot_Code/InputDecoder.vhdl 22 Process line__19
+# 
+force -freeze sim:/inputdecoder/z_obj 100 0
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/dapah/Documents/Computer Engineering/PSD/PROYEK_AKHIR/ArmRobot_Code/InputDecoder.vhdl 22 Process line__19
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/dapah/Documents/Computer Engineering/PSD/PROYEK_AKHIR/ArmRobot_Code/InputDecoder.vhdl 22 Process line__19
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/dapah/Documents/Computer Engineering/PSD/PROYEK_AKHIR/ArmRobot_Code/InputDecoder.vhdl 22 Process line__19
+# 
+# Compile of InputDecoder.vhdl failed with 6 errors.
+# Compile of InputDecoder.vhdl failed with 2 errors.
+# Compile of InputDecoder.vhdl failed with 2 errors.
+# Compile of InputDecoder.vhdl was successful.
+vsim -gui work.inputdecoder
+# End time: 00:58:16 on Dec 05,2024, Elapsed time: 0:11:09
+# Errors: 1, Warnings: 5
+# vsim -gui work.inputdecoder 
+# Start time: 00:58:16 on Dec 05,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.inputdecoder(behavioral)
+add wave -position insertpoint sim:/inputdecoder/*
+force -freeze sim:/inputdecoder/input_data 000001010000101000001111000101000001100100011110 0
+run
+vsim -gui work.robotarmfpga
+# End time: 00:59:59 on Dec 05,2024, Elapsed time: 0:01:43
+# Errors: 0, Warnings: 1
+# vsim -gui work.robotarmfpga 
+# Start time: 00:59:59 on Dec 05,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.robotarmfpga(structural)
+# Loading work.inputdecoder(behavioral)
+# Loading work.navigator(behavioral)
+# Loading work.robotarmfsm(behavioral)
+# Loading work.displaysegment(behavioral)
+add wave -position insertpoint sim:/robotarmfpga/*
+force -freeze sim:/robotarmfpga/clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/robotarmfpga/rst 1 0
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /robotarmfpga/Decoder_Module
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /robotarmfpga/Decoder_Module
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /robotarmfpga/Decoder_Module
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /robotarmfpga/Decoder_Module
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /robotarmfpga/Decoder_Module
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /robotarmfpga/Decoder_Module
+force -freeze sim:/robotarmfpga/rst 0 0
+force -freeze sim:/robotarmfpga/input_data 000001010000101000001111000101000001100100011110 0
+force -freeze sim:/robotarmfpga/start 1 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/robotarmfpga/pos_reached 1 0
+run
+run
+run
+run
+force -freeze sim:/robotarmfpga/pos_reached_internal 1 0
+run
+run
+run
+run
+run
+run
+run
+run
