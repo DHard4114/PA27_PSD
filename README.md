@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Final Project PSD PA27 - Sistem Kendali Robot Arm pada VHDL
 
 ## 1. Latar Belakang
@@ -246,3 +247,6 @@ Status FSM akan ditampilkan pada 7-segment display dengan format berikut:
 | NAV_TO_TGT   | 0110                     |
 | RELEASE_OBJ  | 0111                     |
 | ERROR        | 0000                     |
+=======
+# PA27_PSD
+>>>>>>> bc67fd79f50dc89bca399d20f9efb85943f1f2b5
