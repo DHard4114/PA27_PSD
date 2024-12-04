@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Final Project PSD PA27 - Sistem Kendali Robot Arm pada VHDL
 
 ## 1. Latar Belakang
@@ -224,13 +224,13 @@ Tabel berikut menjelaskan cara menggunakan sistem kendali robot arm ini melalui 
 |-----|-------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
 | 1   | rst = '1'                                                              | Reset sistem                                                                                        | Semua sinyal output (pos_reached, gripper_open, motor_en, dll.) direset ke nilai default. FSM berada di state IDLE. |
 | 2   | rst = '0'                                                              | Reset selesai                                                                                       | Sistem siap menerima input. FSM tetap di state IDLE, menunggu sinyal start.                                    |
-| 3   | input_data = "000000000001010000000101000001100011001100" <br> start = '1' | Input data koordinat: Objek (10, 20, 30), Target (50, 40, 60). Mulai navigasi.                      | FSM berpindah dari IDLE ke CALIBRATING. FSM kemudian berpindah ke NAV_TO_OBJ setelah kalibrasi selesai.         |
+| 3   | input_data = "000001010000101000001111000101000001100100011110" <br> start = '1' | Input data koordinat: Objek (5, 10, 15), Target (20, 25, 30). Mulai navigasi.                      | FSM berpindah dari IDLE ke CALIBRATING. FSM kemudian berpindah ke NAV_TO_OBJ setelah kalibrasi selesai.         |
 | 4   | FSM berada di CALIBRATING                                              | Proses Kalibrasi sedang berjalan                                                                   | FSM tetap di CALIBRATING hingga motor dan gripper bernilai 1. Output: motor_en = '1', gripper_open = '1', pos_reached = '1'. |
-| 5   | FSM berpindah ke NAV_TO_OBJ                                            | Kalibrasi selesai                                                                                  | FSM berpindah ke NAV_TO_OBJ. Navigasi robot dimulai menuju koordinat objek (10, 20, 30). Output: motor_en = '1', pos_reached = '0'. |
-| 6   | FSM mencapai koordinat objek (10, 20, 30) <br> pos_reached = '1'        | Objek tercapai                                                                                     | FSM berpindah ke GRIP_OBJ. Output: gripper_open = '1' untuk mengambil objek, motor_en = '0'.                    |
+| 5   | FSM berpindah ke NAV_TO_OBJ                                            | Kalibrasi selesai                                                                                  | FSM berpindah ke NAV_TO_OBJ. Navigasi robot dimulai menuju koordinat objek (5, 10, 15). Output: motor_en = '1', pos_reached = '0'. |
+| 6   | FSM mencapai koordinat objek (5, 10, 15) <br> pos_reached = '1'        | Objek tercapai                                                                                     | FSM berpindah ke GRIP_OBJ. Output: gripper_open = '1' untuk mengambil objek, motor_en = '0'.                    |
 | 7   | FSM berpindah ke HOLDING                                               | Objek digenggam                                                                                   | FSM berada di HOLDING. Gripper tetap terbuka, menunggu perintah lebih lanjut.                                |
-| 8   | FSM berpindah ke NAV_TO_TGT: Robot bergerak menuju koordinat target (50, 40, 60). | Navigasi menuju target                                                                               | FSM berada di state NAV_TO_TGT. Output: motor_en = '1', pos_reached = '0'. x_out, y_out, z_out menuju target (50, 40, 60). |
-| 9   | FSM mencapai koordinat target (50, 40, 60) <br> pos_reached = '1'        | Target tercapai                                                                                   | FSM berpindah ke RELEASE_OBJ. Output: gripper_open = '0' untuk melepaskan objek, motor_en = '0'.                |
+| 8   | FSM berpindah ke NAV_TO_TGT: Robot bergerak menuju koordinat target (20, 25, 30). | Navigasi menuju target                                                                               | FSM berada di state NAV_TO_TGT. Output: motor_en = '1', pos_reached = '0'. x_out, y_out, z_out menuju target (20, 25, 30). |
+| 9   | FSM mencapai koordinat target (20, 25, 30) <br> pos_reached = '1'        | Target tercapai                                                                                   | FSM berpindah ke RELEASE_OBJ. Output: gripper_open = '0' untuk melepaskan objek, motor_en = '0'.                |
 | 10  | FSM kembali ke state IDLE setelah objek dilepaskan.                    | Sistem menunggu perintah baru                                                                       | FSM kembali ke state IDLE. Semua sinyal output kembali ke nilai default: motor_en = '0', gripper_open = '0', pos_reached = '0'. |
 
 
@@ -247,6 +247,4 @@ Status FSM akan ditampilkan pada 7-segment display dengan format berikut:
 | NAV_TO_TGT   | 0110                     |
 | RELEASE_OBJ  | 0111                     |
 | ERROR        | 0000                     |
-=======
-# PA27_PSD
->>>>>>> bc67fd79f50dc89bca399d20f9efb85943f1f2b5
+
