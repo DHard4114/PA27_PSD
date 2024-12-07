@@ -1,6 +1,7 @@
 LIBRARY IEEE;
 USE IEEE.STD_LOGIC_1164.ALL;
 USE IEEE.NUMERIC_STD.ALL;
+
 ENTITY RobotArmFPGA IS
     PORT (
         clk : IN STD_LOGIC; -- Clock utama
@@ -12,13 +13,14 @@ ENTITY RobotArmFPGA IS
         motor_en : OUT STD_LOGIC; -- Output motor aktif
         state_out : OUT STD_LOGIC_VECTOR(2 DOWNTO 0); -- Status FSM
         error_out : OUT STD_LOGIC; -- Indikator error
-        flag_reach: OUT STD_LOGIC;
+        flag_reach : OUT STD_LOGIC; -- Flag indikator mencapai target
         x_out : OUT INTEGER RANGE 0 TO 999; -- Posisi x robot
         y_out : OUT INTEGER RANGE 0 TO 999; -- Posisi y robot
         z_out : OUT INTEGER RANGE 0 TO 999; -- Posisi z robot
         display_out : OUT STD_LOGIC_VECTOR(6 DOWNTO 0) -- Output untuk Display 7-segment
     );
 END RobotArmFPGA;
+
 ARCHITECTURE Structural OF RobotArmFPGA IS
 
     SIGNAL x_obj, y_obj, z_obj : INTEGER RANGE 0 TO 999;
@@ -28,8 +30,10 @@ ARCHITECTURE Structural OF RobotArmFPGA IS
     SIGNAL gripper_enable : STD_LOGIC;
     SIGNAL error_flag : STD_LOGIC;
     SIGNAL pos_reached_internal : STD_LOGIC;
-    SIGNAL flag_reach_internal: STD_LOGIC;
+    SIGNAL flag_reach_internal : STD_LOGIC;
+
 BEGIN
+    -- Instansiasi komponen-komponen yang sudah didefinisikan sebelumnya
 
     Decoder_Module : ENTITY work.InputDecoder
         PORT MAP(
@@ -75,10 +79,12 @@ BEGIN
             display_out => display_out
         );
 
+    -- Assign nilai output dari sinyal internal
     motor_en <= motor_enable;
     gripper_open <= gripper_enable;
     error_out <= error_flag;
     pos_reached <= pos_reached_internal;
     state_out <= internal_state;
     flag_reach <= flag_reach_internal;
+
 END Structural;
