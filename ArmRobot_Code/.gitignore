@@ -31,7 +31,7 @@ transcript
 # Ignore temporary files created by text editors (e.g., VSCode, Sublime Text)
 .vscode/
 .idea/
-
+*.transcript
 # Ignore compiled and build files
 *.o
 *.obj

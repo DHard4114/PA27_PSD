@@ -12,7 +12,7 @@ ENTITY Navigator IS
         current_x : OUT INTEGER RANGE 0 TO 999; -- Current x position (integer)
         current_y : OUT INTEGER RANGE 0 TO 999; -- Current y position (integer)
         current_z : OUT INTEGER RANGE 0 TO 999; -- Current z position (integer)
-        flag_reach: OUT STD_LOGIC
+        flag_reach : OUT STD_LOGIC
     );
 END Navigator;
 ARCHITECTURE Behavioral OF Navigator IS
