@@ -12,24 +12,24 @@ BEGIN
     PROCESS (state_in)
     BEGIN
         CASE state_in IS
-            WHEN "000" => -- IDLE
-                display_out <= "1111110"; -- Display 1
-            WHEN "001" => -- CALIBRATING
-                display_out <= "0110000"; -- Display 2
-            WHEN "010" => -- NAV_TO_OBJ
-                display_out <= "1101101"; -- Display 3
-            WHEN "011" => -- GRIP_OBJ
-                display_out <= "1111001"; -- Display 4
-            WHEN "100" => -- HOLDING
-                display_out <= "0110011"; -- Display 5
-            WHEN "101" => -- NAV_TO_TGT
-                display_out <= "1011011"; -- Display 6
-            WHEN "110" => -- RELEASE_OBJ
-                display_out <= "1011111"; -- Display 7
-            WHEN "111" => -- ERROR
-                display_out <= "0000000"; -- Error (All segments on)
+            WHEN "000" =>
+                display_out <= "1111110";
+            WHEN "001" =>
+                display_out <= "0110000";
+            WHEN "010" =>
+                display_out <= "1101101";
+            WHEN "011" =>
+                display_out <= "1111001";
+            WHEN "100" =>
+                display_out <= "0110011";
+            WHEN "101" =>
+                display_out <= "1011011";
+            WHEN "110" =>
+                display_out <= "1011111";
+            WHEN "111" =>
+                display_out <= "0000000";
             WHEN OTHERS =>
-                display_out <= "0000000"; -- Default to Error
+                display_out <= "0000000";
         END CASE;
     END PROCESS;
 END Behavioral;
