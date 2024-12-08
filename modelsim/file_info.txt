@@ -1,0 +1,6 @@
+DisplaySegment.vhd,vhdl,xil_defaultlib,../project_1/project_1.srcs/sources_1/new/DisplaySegment.vhd,
+InputDecoder.vhd,vhdl,xil_defaultlib,../project_1/project_1.srcs/sources_1/new/InputDecoder.vhd,
+Navigator.vhd,vhdl,xil_defaultlib,../project_1/project_1.srcs/sources_1/new/Navigator.vhd,
+RobotArmFSM.vhd,vhdl,xil_defaultlib,../project_1/project_1.srcs/sources_1/new/RobotArmFSM.vhd,
+RobotArmFPGA.vhd,vhdl,xil_defaultlib,../project_1/project_1.srcs/sources_1/new/RobotArmFPGA.vhd,
+RobotArmTestbench.vhd,vhdl,xil_defaultlib,../project_1/project_1.srcs/sources_1/new/RobotArmTestbench.vhd,
