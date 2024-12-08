@@ -1,0 +1,12 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Adhik/Documents/sem 3/docs psd/finpro/project_1/project_1.srcs/sources_1/new/DisplaySegment.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'DisplaySegment'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Adhik/Documents/sem 3/docs psd/finpro/project_1/project_1.srcs/sources_1/new/InputDecoder.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'InputDecoder'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Adhik/Documents/sem 3/docs psd/finpro/project_1/project_1.srcs/sources_1/new/Navigator.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Navigator'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Adhik/Documents/sem 3/docs psd/finpro/project_1/project_1.srcs/sources_1/new/RobotArmFSM.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'RobotArmFSM'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Adhik/Documents/sem 3/docs psd/finpro/project_1/project_1.srcs/sources_1/new/RobotArmFPGA.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'RobotArmFPGA'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Adhik/Documents/sem 3/docs psd/finpro/project_1/project_1.srcs/sources_1/new/RobotArmTestbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'RobotArmFPGA_tb'
