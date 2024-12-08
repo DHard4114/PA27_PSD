@@ -22,7 +22,7 @@ ENTITY RobotArmFPGA IS
 END RobotArmFPGA;
 
 ARCHITECTURE Structural OF RobotArmFPGA IS
-
+    -- Internal signals untuk menghubungkan modul-modul
     SIGNAL x_obj, y_obj, z_obj : INTEGER RANGE 0 TO 999;
     SIGNAL x_target, y_target, z_target : INTEGER RANGE 0 TO 999;
     SIGNAL internal_state : STD_LOGIC_VECTOR(2 DOWNTO 0);
@@ -32,9 +32,13 @@ ARCHITECTURE Structural OF RobotArmFPGA IS
     SIGNAL pos_reached_internal : STD_LOGIC;
     SIGNAL flag_reach_internal : STD_LOGIC;
 
-BEGIN
-    -- Instansiasi komponen-komponen yang sudah didefinisikan sebelumnya
+    -- Internal signals untuk Navigator
+    SIGNAL current_x_internal : INTEGER RANGE 0 TO 999;
+    SIGNAL current_y_internal : INTEGER RANGE 0 TO 999;
+    SIGNAL current_z_internal : INTEGER RANGE 0 TO 999;
 
+BEGIN
+    -- Input Decoder Module
     Decoder_Module : ENTITY work.InputDecoder
         PORT MAP(
             input_data => input_data,
@@ -46,45 +50,63 @@ BEGIN
             z_target => z_target
         );
 
+    -- Navigator Module dengan state-dependent navigation
     Navigator_Module : ENTITY work.Navigator
         PORT MAP(
             clk => clk,
             rst => rst,
+            current_state => internal_state, -- Passing current state from FSM
             start => start,
-            target_x => x_target,
-            target_y => y_target,
-            target_z => z_target,
-            current_x => x_out,
-            current_y => y_out,
-            current_z => z_out,
+
+            -- Object and target coordinates from Decoder
+            x_obj => x_obj,
+            y_obj => y_obj,
+            z_obj => z_obj,
+            x_target => x_target,
+            y_target => y_target,
+            z_target => z_target,
+
+            -- Current position outputs
+            current_x => current_x_internal,
+            current_y => current_y_internal,
+            current_z => current_z_internal,
+
+            -- Reach flag
             flag_reach => flag_reach_internal
         );
 
+    -- Finite State Machine Module
     FSM_Module : ENTITY work.RobotArmFSM
         PORT MAP(
             clk => clk,
             rst => rst,
             start => start,
-            pos_reached => pos_reached_internal,
+            flag_reach => flag_reach_internal,
             gripper_status => gripper_enable,
             motor_status => motor_enable,
+            pos_reached => pos_reached_internal,
             state_out => internal_state,
-            error_out => error_flag,
-            flag_reach => flag_reach_internal
+            error_out => error_flag
         );
 
+    -- Display Segment Module
     Display_Module : ENTITY work.DisplaySegment
         PORT MAP(
             state_in => internal_state,
             display_out => display_out
         );
 
-    -- Assign nilai output dari sinyal internal
+    -- Assign output signals
     motor_en <= motor_enable;
     gripper_open <= gripper_enable;
     error_out <= error_flag;
     pos_reached <= pos_reached_internal;
     state_out <= internal_state;
     flag_reach <= flag_reach_internal;
+
+    -- Assign current position outputs
+    x_out <= current_x_internal;
+    y_out <= current_y_internal;
+    z_out <= current_z_internal;
 
 END Structural;

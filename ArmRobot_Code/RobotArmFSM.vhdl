@@ -7,7 +7,7 @@ ENTITY RobotArmFSM IS
         clk : IN STD_LOGIC;
         rst : IN STD_LOGIC;
         start : IN STD_LOGIC;
-        flag_reach : IN STD_LOGIC;
+        flag_reach : IN STD_LOGIC; -- Dari Navigator
         gripper_status : OUT STD_LOGIC;
         motor_status : OUT STD_LOGIC;
         pos_reached : OUT STD_LOGIC;
@@ -38,7 +38,7 @@ BEGIN
 
     -- Proses delay untuk kalibrasi
     calibration_delay_process : PROCESS (clk, rst)
-        VARIABLE delay_count : INTEGER RANGE 0 TO DELAY_CYCLES_CALIBRATING;
+        VARIABLE delay_count : INTEGER RANGE 0 TO DELAY_CYCLES_CALIBRATING := 0;
     BEGIN
         IF rst = '1' THEN
             delay_count := 0;
@@ -58,13 +58,17 @@ BEGIN
             END IF;
         END IF;
     END PROCESS calibration_delay_process;
+
     -- Proses state machine utama
-    fsm_process : PROCESS (current_state, start, delay_done)
+    fsm_process : PROCESS (current_state, start, flag_reach, delay_done)
         VARIABLE pos_reached_temp : STD_LOGIC := '0';
         VARIABLE gripper_control : STD_LOGIC := '0';
         VARIABLE motor_control : STD_LOGIC := '0';
     BEGIN
         -- Default assignments
+        motor_status <= motor_control;
+        gripper_status <= gripper_control;
+        pos_reached <= pos_reached_temp;
 
         CASE current_state IS
             WHEN IDLE =>
@@ -82,93 +86,85 @@ BEGIN
                 END IF;
 
                 IF motor_control = '1' AND gripper_control = '1' THEN
-                    pos_reached_temp := '1';
-                END IF;
-
-                IF pos_reached_temp = '1' THEN
                     next_state <= NAV_TO_OBJ;
                     motor_control := '0';
                     gripper_control := '0';
-                    pos_reached_temp := '0'; -- Reset posisi tercapai
                 END IF;
+
             WHEN NAV_TO_OBJ =>
-                ---flag_reach := '1'; -- Asumsi navigator berhasil
+                -- flag_reach dari Navigator yang menunjukkan apakah objek sudah tercapai
                 IF flag_reach = '1' THEN
-                    pos_reached_temp := '0';
-                    next_state <= GRIP_OBJ;
+                    pos_reached_temp := '0'; -- Reset pos_reached_temp
+                    next_state <= GRIP_OBJ; -- Melanjutkan ke state GRIP_OBJ
                 ELSIF start = '0' THEN
-                    next_state <= ERROR;
+                    next_state <= ERROR; -- Error jika start = '0'
                 END IF;
 
             WHEN GRIP_OBJ =>
+                -- Mengaktifkan gripper untuk menggenggam objek
                 gripper_control := '1';
                 IF gripper_control = '1' THEN
-                    pos_reached_temp := '1';
+                    pos_reached_temp := '1'; -- Menandakan objek sudah digenggam
                 END IF;
 
                 IF pos_reached_temp = '1' THEN
-                    next_state <= HOLDING;
-                    pos_reached_temp := '0';
+                    next_state <= HOLDING; -- Melanjutkan ke state HOLDING
                 END IF;
 
                 IF start = '0' THEN
-                    next_state <= ERROR;
+                    next_state <= ERROR; -- Error jika start = '0'
                 END IF;
 
             WHEN HOLDING =>
+                -- Robot memegang objek
                 gripper_control := '1';
-                motor_control := '0';
+                motor_control := '0'; -- Motor tidak aktif saat holding
                 IF gripper_control = '1' THEN
-                    pos_reached_temp := '1';
+                    pos_reached_temp := '1'; -- Menandakan objek tetap dipegang
                 END IF;
 
                 IF pos_reached_temp = '1' THEN
-                    next_state <= NAV_TO_TGT;
-                    pos_reached_temp := '0';
+                    next_state <= NAV_TO_TGT; -- Melanjutkan ke state NAV_TO_TGT
                 END IF;
 
                 IF start = '0' THEN
-                    next_state <= ERROR;
+                    next_state <= ERROR; -- Error jika start = '0'
                 END IF;
 
             WHEN NAV_TO_TGT =>
+                -- Robot menuju target
                 motor_control := '1';
-                --flag_reach := '1'; -- Asumsi navigator berhasil
                 IF flag_reach = '1' THEN
-                    pos_reached_temp := '0';
-                    next_state <= RELEASE_OBJ;
+                    pos_reached_temp := '0'; -- Reset pos_reached_temp
+                    next_state <= RELEASE_OBJ; -- Melanjutkan ke state RELEASE_OBJ
                 ELSIF start = '0' THEN
-                    next_state <= ERROR;
+                    next_state <= ERROR; -- Error jika start = '0'
                 END IF;
 
             WHEN RELEASE_OBJ =>
-                gripper_control := '0';
-                motor_control := '0';
+                -- Melepaskan objek
+                gripper_control := '0'; -- Mematikan gripper
+                motor_control := '0'; -- Mematikan motor
                 IF gripper_control = '0' AND motor_control = '0' THEN
-                    pos_reached_temp := '1';
+                    pos_reached_temp := '1'; -- Menandakan objek sudah dilepas
                 END IF;
 
                 IF pos_reached_temp = '1' THEN
-                    next_state <= IDLE;
-                    pos_reached_temp := '0';
+                    next_state <= IDLE; -- Kembali ke state IDLE
                 END IF;
 
                 IF start = '0' THEN
-                    next_state <= ERROR;
+                    next_state <= ERROR; -- Error jika start = '0'
                 END IF;
 
             WHEN ERROR =>
+                -- Error handling
                 IF rst = '1' THEN
-                    next_state <= IDLE;
+                    next_state <= IDLE; -- Kembali ke IDLE jika reset
                 ELSE
-                    next_state <= ERROR;
+                    next_state <= ERROR; -- Tetap di state ERROR
                 END IF;
         END CASE;
-
-        -- Assign output values
-        motor_status <= motor_control;
-        gripper_status <= gripper_control;
-        pos_reached <= pos_reached_temp;
 
     END PROCESS fsm_process;
 
