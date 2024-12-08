@@ -220,7 +220,6 @@ FSM berfungsi untuk memastikan bahwa robot arm selalu berada dalam satu status y
 ### 3.1 Tabel Input dan Output Harapan
 Berikut tabel penjelasan cara menggunakan sistem kendali robot arm ini melalui input dan output pada setiap langkah.
 
-<<<<<<< HEAD
 | No. | Input Testbench                                                        | Deskripsi                                                                                          | Output Harapan                                                                                                 |
 |-----|-------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
 | 1   | rst = '1'                                                              | Reset sistem                                                                                        | Semua sinyal output (pos_reached, gripper_open, motor_en, dll.) direset ke nilai default. FSM berada di state IDLE. |
@@ -297,7 +296,7 @@ Status FSM akan ditampilkan pada 7-segment display dengan format berikut:
 | RELEASE_OBJ  | 0111                     |
 | ERROR        | 0000                     |
 
-<<<<<<< HEAD
+
 =======
 
 ## 4. Testing
@@ -309,6 +308,6 @@ Status FSM akan ditampilkan pada 7-segment display dengan format berikut:
 
 ### Wave
 ---
-![Wave](https://s6.imgcdn.dev/8PvGM.png)
+![Wave](https://s6.imgcdn.dev/8PLeN.png)
 ---
->>>>>>> adhik
+
